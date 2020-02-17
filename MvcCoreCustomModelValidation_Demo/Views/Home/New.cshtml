@@ -1,0 +1,40 @@
+﻿@model MvcCoreCustomModelValidation_Demo.Models.Student
+
+@{
+    ViewData["Title"] = "New";
+}
+
+<div class="card">
+    <div class="card-header">
+        <h4 class="text-uppercase">Student Information</h4>
+    </div>
+    <div class="card-body">
+        <form asp-action="New">
+            <div class="form-group">
+                <label asp-for="Name" class="label-control"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="AdmissionDate" class="label-control"></label>
+                        <input asp-for="AdmissionDate" class="form-control" />
+                        <span asp-validation-for="AdmissionDate" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label asp-for="DateofBirth" class="label-control"></label>
+                        <input asp-for="DateofBirth" class="form-control" />
+                        <span asp-validation-for="DateofBirth" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-sm btn-primary rounded-0">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>
+
